@@ -1,15 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import MobileNav from "./MobileNav";
 
 export default function Layout() {
   return (
-    <div>
+    <main className="pb-14 lg:pb-0">
       <Header />
-      <main>
+      <div className="pt-16">
         <Outlet />
-      </main>
+      </div>
       <Footer />
-    </div>
+      <MobileNav />
+    </main>
   );
 }
