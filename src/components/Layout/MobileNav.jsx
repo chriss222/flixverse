@@ -37,14 +37,14 @@ const MobileNav = () => {
         <div
           className={`absolute h-full w-full left-0 top-0 bg-neutral-500 flex items-center justify-center gap-6
                       transition-all duration-200 ease-in-out transform translate-y-full opacity-0 ${
-                        searchVisible ? "translate-y-[0] opacity-100" : ""
+                        searchVisible ? "translate-y-[0px] opacity-100" : ""
                       }`}
         >
           <input
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
-              navigate(`/search?q=${e.target.value}`);
+              navigate(e.target.value ? `/search?q=${e.target.value}` : "");
             }}
             className="rounded-full px-4 py-1"
             placeholder="Search..."

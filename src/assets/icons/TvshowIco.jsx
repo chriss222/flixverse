@@ -2,17 +2,7 @@ import React from "react";
 
 const TvshowIco = ({ height = 24, width = 24 }) => {
   return (
-    <svg
-      fill="#000000"
-      height={height}
-      width={width}
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 512.005 512.005"
-      xml:space="preserve"
-    >
+    <svg fill="#000000" height={height} width={width} version="1.1" id="Layer_1" viewBox="0 0 512.005 512.005">
       <g>
         <g>
           <g>

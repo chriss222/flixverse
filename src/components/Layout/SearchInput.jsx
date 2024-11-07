@@ -7,7 +7,7 @@ const SearchInput = () => {
   return (
     <div className="hidden lg:flex items-center ml-auto gap-1">
       <input
-        onChange={(e) => navigate(`/search?q=${e.target.value}`)}
+        onChange={(e) => navigate(e.target.value ? `/search?q=${e.target.value}` : "")}
         type="text"
         placeholder="Search here.."
         className="px-4 py-1 bg-transparent outline-none border-none"
