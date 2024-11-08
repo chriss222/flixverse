@@ -10,7 +10,7 @@ const MobileNav = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="lg:hidden h-16 bg-neutral-700 bg-opacity-45 fixed bottom-0 w-full left-0">
+    <section className="lg:hidden h-16 bg-neutral-700 bg-opacity-95 fixed bottom-0 w-full left-0">
       <nav
         className={`flex h-full justify-between items-center px-3 transition-all duration-300 ease-in-out 
                     ${searchVisible ? "opacity-0" : "opacity-100"}`}
@@ -37,7 +37,7 @@ const MobileNav = () => {
         <div
           className={`absolute h-full w-full left-0 top-0 bg-neutral-500 flex items-center justify-center gap-6
                       transition-all duration-200 ease-in-out transform translate-y-full opacity-0 ${
-                        searchVisible ? "translate-y-[0px] opacity-100" : ""
+                        searchVisible ? "translate-y-[1px] opacity-100" : ""
                       }`}
         >
           <input

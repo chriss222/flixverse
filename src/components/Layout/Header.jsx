@@ -5,7 +5,7 @@ import SearchInput from "./SearchInput";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full h-16 bg-neutral-700 bg-opacity-80 left-0">
+    <header className="absolute top-0 w-full h-16 bg-neutral-700 bg-opacity-80 left-0">
       <div className="justify-center container mx-auto px-2 flex items-center h-full gap-5">
         <div>
           <h1>Flixverse</h1>

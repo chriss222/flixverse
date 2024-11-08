@@ -5,19 +5,8 @@ import SearchPage from "./pages/SearchPage";
 import DetailsPage from "./pages/DetailsPage";
 import Layout from "./components/Layout/Layout";
 import "./App.css";
-import { useEffect } from "react";
-import { fetchTrendingData } from "./features/api/api";
 
 export default function App() {
-  console.log(import.meta.env);
-  useEffect(() => {
-    const getTrending = async () => {
-      const data = await fetchTrendingData();
-      console.log("DATA: ", data);
-    };
-    getTrending();
-  }, []);
-
   return (
     <Router>
       <Routes>
