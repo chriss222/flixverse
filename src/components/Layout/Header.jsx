@@ -12,10 +12,10 @@ const Header = () => {
             <h1>Flixverse</h1>
           </NavLink>
         </div>
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-2">
           {navigation.map((nav, i) => (
-            <div key={i} className="px-1">
-              <NavLink to={nav.href} className={({ isActive }) => `${isActive ? "text-neutral-400" : ""} hover:text-neutral-200`}>
+            <div key={i} className="px-2 py-2 bg-neutral-500 rounded-md">
+              <NavLink to={nav.href} className={({ isActive }) => `${isActive ? "text-neutral-300" : ""} hover:text-neutral-200`}>
                 <div className="flex items-center gap-4 ml-4">
                   {nav.label}
                   <nav.ico />
