@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchIco = ({ width = 24, height = 24 }) => {
+const FindIco = ({ width = 24, height = 24 }) => {
   return (
     <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -14,4 +14,4 @@ const SearchIco = ({ width = 24, height = 24 }) => {
   );
 };
 
-export default SearchIco;
+export default FindIco;

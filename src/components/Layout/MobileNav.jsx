@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { navigation } from "../../utils/navigation";
-import { NavLink, useNavigate } from "react-router-dom";
-import SearchIco from "../../assets/icons/searchIco";
+import { NavLink } from "react-router-dom";
+import FindIco from "../../assets/icons/FindIco";
 import CloseIco from "../../assets/icons/CloseIco";
+import SearchInput from "./SearchInput";
 
 const MobileNav = () => {
   const [searchVisible, setSearchVisible] = useState(false);
-  const [search, setSearch] = useState("");
-  const navigate = useNavigate();
 
   return (
     <section className="lg:hidden h-16 bg-neutral-700 bg-opacity-95 fixed bottom-0 w-full left-0">
@@ -29,7 +28,7 @@ const MobileNav = () => {
         </div>
         <button onClick={() => setSearchVisible(true)} className="flex justify-center self-stretch min-w-[62px]">
           <div className="self-center">
-            <SearchIco />
+            <FindIco />
           </div>
         </button>
       </nav>
@@ -40,18 +39,9 @@ const MobileNav = () => {
                         searchVisible ? "translate-y-[1px] opacity-100" : ""
                       }`}
         >
-          <input
-            value={search}
-            onChange={(e) => {
-              setSearch(e.target.value);
-              navigate(e.target.value ? `/search?q=${e.target.value}` : "");
-            }}
-            className="rounded-full px-4 py-1"
-            placeholder="Search..."
-          />
+          <SearchInput />
           <button
             onClick={() => {
-              setSearch("");
               setSearchVisible(false);
             }}
             className="self-center"

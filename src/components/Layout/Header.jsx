@@ -24,7 +24,9 @@ const Header = () => {
             </div>
           ))}
         </nav>
-        <SearchInput />
+        <div className="hidden lg:flex ml-auto">
+          <SearchInput />
+        </div>
       </div>
     </header>
   );

@@ -30,7 +30,7 @@ const DetailsPage = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{category === "movie" ? data.title : data.name}</h1>
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-col sm:flex-row">
         <img src={`https://image.tmdb.org/t/p/w500${data.poster_path}`} alt={data.title || data.name} className="w-1/3" />
         <div>
           <h2 className="text-xl font-semibold">Overview</h2>

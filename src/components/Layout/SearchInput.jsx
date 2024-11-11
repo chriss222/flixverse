@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SearchIco from "../../assets/icons/searchIco";
+import FindIco from "../../assets/icons/FindIco";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const SearchInput = () => {
@@ -13,7 +13,7 @@ const SearchInput = () => {
   }, [location]);
 
   return (
-    <div className="hidden lg:flex items-center ml-auto gap-1">
+    <div className="flex items-center gap-1">
       <input
         onChange={(e) => {
           setSearch(e.target.value);
@@ -24,7 +24,9 @@ const SearchInput = () => {
         placeholder="Search here.."
         className="px-4 py-1 bg-transparent outline-none border-none"
       />
-      <SearchIco />
+      <div className="hidden lg:block">
+        <FindIco />
+      </div>
     </div>
   );
 };
