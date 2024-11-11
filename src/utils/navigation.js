@@ -4,12 +4,12 @@ import MovieIco from "../assets/icons/MovieIco";
 export const navigation = [
   {
     label: "TV Shows",
-    href: "/tv",
+    href: "/trending/tv",
     ico: TvshowIco,
   },
   {
     label: "Movies",
-    href: "/movie",
+    href: "/trending/movie",
     ico: MovieIco,
   },
 ];

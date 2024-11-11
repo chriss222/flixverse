@@ -12,8 +12,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path=":explore" element={<ExplorePage />} />
-          <Route path=":explore/:id" element={<DetailsPage />} />
+          <Route path="/trending/:explore" element={<ExplorePage />} />
+          <Route path="/details/:category/:id" element={<DetailsPage />} />
           <Route path="/search" element={<SearchPage />} />
         </Route>
       </Routes>

@@ -1,16 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MovieIco from "../assets/icons/MovieIco";
 import TvshowIco from "../assets/icons/TvshowIco";
 import StarRating from "../assets/icons/StarRating";
+import InformationIco from "../assets/icons/InformationIco";
 
-const MovieCard = ({ id, posterPath, title, type, overview, score }) => {
-  console.log(id, posterPath, title, overview);
+const MovieCard = ({ id, posterPath, title, type, page, score }) => {
+  const location = useLocation();
+  const category = location.pathname.split("/").pop();
 
   return (
     <div className="rounded-sm bg-gray-400">
       <div className="flex flex-col justify-between items-center relative h-full">
-        <Link to={`/details/${id}`} key={id}>
+        <button className="absolute font-bold top-0 left-0 p-3 bg-gray-600 opacity-70 flex justify-center items-center gap-2 text-sm rounded-tl-sm rounded-br-sm">
+          <InformationIco />
+          <p>More info</p>
+        </button>
+        <Link to={`/details/${category || "all"}/${id}?page=${page}`} key={id}>
           <img src={`https://image.tmdb.org/t/p/w500${posterPath}`} height={220} width={300} alt={title} />
         </Link>
         <div className="p-1 bg-gray-500 opacity-85 text-sm w-full">
