@@ -35,9 +35,9 @@ const MobileNav = () => {
       {setSearchVisible && (
         <div
           className={`absolute h-full w-full left-0 top-0 bg-neutral-500 flex items-center justify-center gap-6
-                      transition-all duration-200 ease-in-out transform translate-y-full opacity-0 ${
-                        searchVisible ? "translate-y-[2px] opacity-100" : ""
-                      }`}
+            transition-all duration-200 ease-in-out transform ${
+              searchVisible ? "translate-y-[0] opacity-100" : "translate-y-full opacity-0"
+            }`}
         >
           <SearchInput />
           <button
